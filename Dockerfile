@@ -75,7 +75,7 @@ RUN \
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer; ln -s /usr/local/bin/composer /usr/bin/composer
 
 # Install Drush
-RUN mkdir /usr/local/src/composer; composer global require drush/drush -d /usr/local/src/composer/
+RUN mkdir /usr/local/src/composer; composer global require drush/drush:7.* -d /usr/local/src/composer/
 RUN ln -s /usr/local/src/composer/vendor/drush/drush/drush /usr/local/bin/
 
 WORKDIR /var/www
