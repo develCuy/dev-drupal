@@ -68,7 +68,7 @@ RUN \
   sed -i "s/\(html_errors *= *\).*/\1On/" /etc/php/5.6/apache2/php.ini;\
   sed -i "s/\(post_max_size *= *\).*/\120M/" /etc/php/5.6/apache2/php.ini;\
   sed -i "s/\(upload_max_filesize *= *\).*/\120M/" /etc/php/5.6/apache2/php.ini;\
-  sed -i "s/\(\;date.timezone *= *\).*/date.timezone\"America\\\Bogota\"/" /etc/php/5.6/apache2/php.ini;\
+  sed -i "s/\(\;date.timezone *= *\).*/date.timezone = \"America\\\Bogota\"/" /etc/php/5.6/apache2/php.ini;\
   sed -i "s/\(memory_limit *= *\).*/\1512M/" /etc/php/5.6/apache2/php.ini
 
 # Install Composer
